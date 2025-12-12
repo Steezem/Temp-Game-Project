@@ -152,7 +152,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1709333791}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 10, y: -15, z: 0}
 --- !u!114 &1599059
 MonoBehaviour:
@@ -431,7 +431,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1709333791}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &256527790
 MonoBehaviour:
@@ -706,11 +706,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8434589221339364836, guid: 64b182395c0b6744a920c74bce3ece13, type: 3}
   m_PrefabInstance: {fileID: 1757109977}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1709333791 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9099099296081717086, guid: 64b182395c0b6744a920c74bce3ece13, type: 3}
-  m_PrefabInstance: {fileID: 1757109977}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1709333792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -724,9 +719,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterMovement
   InputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  m_animator: {fileID: 0}
+  m_rigidbody: {fileID: 0}
   WalkSpeed: 5
   JumpSpeed: 5
-  RotateSpeed: 5
+  RotateSpeed: 50
 --- !u!136 &1709333793
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -746,10 +743,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1
+  m_Radius: 0.26886785
+  m_Height: 1.7411964
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: -0.018237054, y: 0.87616193, z: 0.018202633}
 --- !u!54 &1709333794
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -758,7 +755,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709333783}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -785,6 +782,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2929119099450096932, guid: 64b182395c0b6744a920c74bce3ece13, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4132312772176831909, guid: 64b182395c0b6744a920c74bce3ece13, type: 3}
       propertyPath: m_Name
       value: Rio
@@ -835,13 +836,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 9099099296081717086, guid: 64b182395c0b6744a920c74bce3ece13, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1599058}
-    - targetCorrespondingSourceObject: {fileID: 9099099296081717086, guid: 64b182395c0b6744a920c74bce3ece13, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 256527789}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8434589221339364836, guid: 64b182395c0b6744a920c74bce3ece13, type: 3}
       insertIndex: -1
@@ -993,3 +988,5 @@ SceneRoots:
   - {fileID: 740508472}
   - {fileID: 1757109977}
   - {fileID: 1473361571}
+  - {fileID: 1599058}
+  - {fileID: 256527789}

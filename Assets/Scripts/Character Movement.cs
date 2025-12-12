@@ -12,7 +12,7 @@ public class CharacterMovement : MonoBehaviour
     private Vector2 m_moveAmount;
     private Vector2 m_lookAmount;
 
-    private Animator m_animator;
+    //private Animator m_animator;
     private Rigidbody m_rigidbody;
 
     public float WalkSpeed = 5;
@@ -32,7 +32,7 @@ public class CharacterMovement : MonoBehaviour
         m_lookAction = InputSystem.actions.FindAction("Look");
         m_jumpAction = InputSystem.actions.FindAction("Jump");
 
-        m_animator = GetComponent<Animator>();
+        //m_animator = GetComponent<Animator>();
         m_rigidbody = GetComponent<Rigidbody>();
 
     }
@@ -46,7 +46,7 @@ public class CharacterMovement : MonoBehaviour
     void Update() {
         m_moveAmount = m_moveAction.ReadValue<Vector2>();
         m_lookAmount = m_lookAction.ReadValue<Vector2>();
-        
+
         if (m_jumpAction.WasPressedThisFrame()) {
             Jump();
         }
@@ -54,7 +54,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void Jump() {
         m_rigidbody.AddForceAtPosition(new Vector3(0, 5f, 0), Vector3.up, ForceMode.Impulse);
-        m_animator.SetTrigger("Jump");
+        //m_animator.SetTrigger("Jump");
     }
 
     private void FixedUpdate() {
@@ -63,7 +63,7 @@ public class CharacterMovement : MonoBehaviour
     }
 
     private void Walking() {
-        m_animator.SetFloat("Speed", m_moveAmount.y);
+        /*m_animator.SetFloat("Speed", m_moveAmount.y);*/
         m_rigidbody.MovePosition(m_rigidbody.position + transform.forward * m_moveAmount.y * WalkSpeed * Time.deltaTime);
     }
 
