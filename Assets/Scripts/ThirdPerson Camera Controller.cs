@@ -27,14 +27,14 @@ public class ThirdPersonCamera : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         cam = GetComponent<CinemachineCamera>();
-        orbital = GetComponent<Camera>().GetComponent<CinemachineOrbitalFollow>();
+        orbital = cam.GetComponent<CinemachineOrbitalFollow>();
 
         targetZoom = currentZoom = orbital.Radius;
     }
 
     private void HandleMouseScroll(InputAction.CallbackContext context)
     {
-        scrollDelta = context.Readvalue<Vector2>();
+        scrollDelta = context.ReadValue<Vector2>();
         Debug.Log($"Mouse is scrolling. Value: {scrollDelta}");
     }
 
