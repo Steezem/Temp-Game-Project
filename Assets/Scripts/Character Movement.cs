@@ -5,73 +5,52 @@ public class CharacterMovement : MonoBehaviour
 {
     public InputActionAsset InputActions;
 
-    private InputAction m_moveAction;
-    private InputAction m_lookAction;
-    private InputAction m_jumpAction;
+    private InputAction moveAction;
+    private InputAction lookAction;
+    private InputAction jumpAction;
 
-    private Vector2 m_moveAmount;
-    private Vector2 m_lookAmount;
+    private Vector2 moveAmount;
+    private Vector2 lookAmount;
 
-    //private Animator m_animator;
-    private Rigidbody m_rigidbody;
+    private Rigidbody rb;
 
-    public float WalkSpeed = 5;
-    public float JumpSpeed = 5;
-    public float RotateSpeed = 5;
+    [SerializeField] private float speed = 5f;
+    [SerializeField] private float jumpHeight = 2f;
+    [SerializeField] private float gravity = -9.8f;
 
-    private void OnEnable() {
-        InputActions.FindActionMap("Player").Enable();
-    }
+    private CharacterController controller;
+    private Vector3 moveInput;
+    private Vector3 velocity;
 
-    private void OnDisable() {
-        InputActions.FindActionMap("Player").Disable();
-    }
-
-    private void Awake() {
-        m_moveAction = InputSystem.actions.FindAction("Move");
-        m_lookAction = InputSystem.actions.FindAction("Look");
-        m_jumpAction = InputSystem.actions.FindAction("Jump");
-
-        //m_animator = GetComponent<Animator>();
-        m_rigidbody = GetComponent<Rigidbody>();
-
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        controller = GetComponent<CharacterController>();
 
     }
 
-    // Update is called once per frame
-    void Update() {
-        m_moveAmount = m_moveAction.ReadValue<Vector2>();
-        m_lookAmount = m_lookAction.ReadValue<Vector2>();
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        moveInput = context.ReadValue<Vector2>();
+        Debug.Log($"Move Input: {moveInput}");
+    }
 
-        if (m_jumpAction.WasPressedThisFrame()) {
-            Jump();
+    public void OnJump(InputAction.CallbackContext context)
+    {
+        Debug.Log($"Jumping {context.performed} - Is Grounded: {controller.isGrounded}");
+
+        if (context.performed && controller.isGrounded)
+        {
+            Debug.Log("We're jumping");
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
     }
 
-    public void Jump() {
-        m_rigidbody.AddForceAtPosition(new Vector3(0, 5f, 0), Vector3.up, ForceMode.Impulse);
-        //m_animator.SetTrigger("Jump");
-    }
+    void Update()
+    {
+        Vector3 move = new Vector3(moveInput.x, 0, moveInput.y);
+        controller.Move(move*speed*Time.deltaTime);
 
-    private void FixedUpdate() {
-        Walking();
-        Rotating();
-    }
-
-    private void Walking() {
-        /*m_animator.SetFloat("Speed", m_moveAmount.y);*/
-        m_rigidbody.MovePosition(m_rigidbody.position + transform.forward * m_moveAmount.y * WalkSpeed * Time.deltaTime);
-    }
-
-    private void Rotating() {
-        if (m_moveAmount.y != 0) {
-            float rotationAmount = m_lookAmount.x * RotateSpeed * Time.deltaTime;
-            Quaternion deltaRotation = Quaternion.Euler(0, rotationAmount, 0);
-            m_rigidbody.MoveRotation(m_rigidbody.rotation * deltaRotation);
-        }
+        velocity.y += gravity * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
     }
 }

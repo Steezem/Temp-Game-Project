@@ -9,7 +9,7 @@ public class ThirdPersonCamera : MonoBehaviour
     [SerializeField] private float minDistance = 3f;
     [SerializeField] private float maxDistance = 15f;
 
-    private InputSystem_Actions controls;
+    [SerializeField] private PlayerMovement controls;
 
     private CinemachineCamera cam;
     private CinemachineOrbitalFollow orbital;
@@ -21,9 +21,9 @@ public class ThirdPersonCamera : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        controls = new InputSystem_Actions();
+        controls = new PlayerMovement();
         controls.Enable();
-        controls.CameraControls.MouseZoom.performed += HandleMouseScroll;
+        //controls.CameraControls.MouseZoom.performed += HandleMouseScroll;
 
         Cursor.lockState = CursorLockMode.Locked;
         cam = GetComponent<CinemachineCamera>();
@@ -50,6 +50,11 @@ public class ThirdPersonCamera : MonoBehaviour
             }
         }
 
+        //float bumperDelta = controls.CameraControls.GamepadZoom.ReadValue<float>();
+        //if (bumperDelta != 0)
+        //{
+        //    targetZoom = Mathf.Clamp(orbital.Radius - bumperDelta * zoomSpeed, minDistance, maxDistance);
+        //}
         currentZoom = Mathf.Lerp(currentZoom, targetZoom, Time.deltaTime * zoomLerpSpeed);
         orbital.Radius = currentZoom;
     }
