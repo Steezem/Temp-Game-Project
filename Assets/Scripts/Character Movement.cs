@@ -37,6 +37,18 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
+    public void OnSprint(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            speed *= 2;
+        }
+        else if (context.canceled)
+        {
+            speed /= 2;
+        }
+    }
+
     void Update()
     {
         Vector3 forward = cameraTransform.forward;
