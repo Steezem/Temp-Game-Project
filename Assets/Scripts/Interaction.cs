@@ -14,10 +14,8 @@ public class InteractionRaycast : MonoBehaviour
             Debug.Log("Interacted with " + hit.transform.name + hit.transform.tag);
             if (hit.transform.tag == "NPC")
             {
-                //manager.StartDialogue();
                 Debug.Log(gameObject.name + " Interacted with " + hit.transform.name + " " + hit.transform.tag);
-                //input = gameObject.GetComponent<PlayerInput>();
-                gameObject.GetComponent<PlayerInput>().enabled = false;
+                manager.StartDialogue();
 
             }
         }

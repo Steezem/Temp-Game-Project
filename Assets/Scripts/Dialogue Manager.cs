@@ -1,9 +1,11 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    public GameObject playerCharacter;
     public TextMeshProUGUI speakerNameText;
     public TextMeshProUGUI dialogueText;
     public Button[] optionButtons;
@@ -11,6 +13,7 @@ public class DialogueManager : MonoBehaviour
 
     public DialogueLine[] dialogueLines;
     private int currentLineIndex = 0;
+    private bool inDialogue = false;
 
     void Start()
     {
@@ -19,11 +22,20 @@ public class DialogueManager : MonoBehaviour
         //Eventually load dialogue from a json file permaybe
     }
 
+
     public void StartDialogue()
     {
+        playerCharacter.GetComponent<CharacterMovement>().enabled = false;
         dialoguePanel.SetActive(true);
         currentLineIndex = 0;
         DisplayDialogueLine(dialogueLines[currentLineIndex]);
+        inDialogue = true;
+    }
+
+    public void OnInteractInConvo(InputAction.CallbackContext context)
+    {
+        Debug.Log("Yes it gets recognized");
+        DisplayNextLine();
     }
 
     public void DisplayNextLine()
@@ -34,14 +46,17 @@ public class DialogueManager : MonoBehaviour
             DisplayDialogueLine(dialogueLines[currentLineIndex]);
         } else
         {
+            inDialogue = false;
             EndDialogue();
         }
     }
 
     private void DisplayDialogueLine(DialogueLine line)
     {
-        speakerNameText.text = line.speakerName;
-        dialogueText.text = line.text;
+
+        //TODO implement slow rolling out of text
+        //speakerNameText.text = line.speakerName;
+        //dialogueText.text = line.text;
 
         if (line.options != null && line.options.Length > 0)
         {
@@ -92,20 +107,4 @@ public class DialogueManager : MonoBehaviour
     {
         dialoguePanel.SetActive(false);
     }
-}
-
-[System.Serializable]
-public class DialogueLine : MonoBehaviour
-{
-    public string speakerName;
-    public string text;
-    public DialogueOption[] options;
-
-}
-
-[System.Serializable]
-public class DialogueOption : MonoBehaviour
-{
-    public string text;
-    public int nextLineIndex;
 }
