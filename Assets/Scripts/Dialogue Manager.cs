@@ -8,18 +8,19 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     public GameObject playerCharacter;
-    public TextMeshProUGUI speakerNameText;
+    public TextMeshProUGUI nameText;
+    public TextMeshProUGUI dialogueText;
     public Button[] optionButtons;
     public GameObject dialoguePanel;
 
-    private int currentLineIndex = 0;
+    public Animator animator;
     private Queue<string> sentences;
     private bool inDialogue = false;
 
     void Start()
     {
         sentences = new Queue<string>();
-        dialoguePanel.SetActive(false);
+        //dialoguePanel.SetActive(false);
 
         //Eventually load dialogue from a json file permaybe
     }
@@ -30,6 +31,8 @@ public class DialogueManager : MonoBehaviour
         // It works, but is very spaghetti-like
         // Another found solution is below - disabling the InteractionRaycast Module of the Player Character until EndDialogue is called
         if (inDialogue) return;
+
+        nameText.text = dialogue.name;
         sentences.Clear();
         playerCharacter.GetComponent<CharacterMovement>().enabled = false;
         //playerCharacter.GetComponent<InteractionRaycast>().enabled = false;
@@ -39,9 +42,9 @@ public class DialogueManager : MonoBehaviour
             sentences.Enqueue(sentence);
         }
 
-        dialoguePanel.SetActive(true);
+        //dialoguePanel.SetActive(true);
+        animator.SetBool("isOpen", true);
         inDialogue = true;
-        Debug.Log("Starting conversation with " + dialogue.name);
 
 
         
@@ -56,18 +59,29 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
-        Debug.Log(sentence);
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(sentence));
 
 
     }
 
+    IEnumerator TypeSentence (string sentence)
+    {
+        dialogueText.text = "";
+        foreach (char letter in sentence.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return null;
+        }
+    }
+
     void EndDialogue()
     {
-        dialoguePanel.SetActive(false);
+        animator.SetBool("isOpen", false);
+        //dialoguePanel.SetActive(false);
         playerCharacter.GetComponent<CharacterMovement>().enabled = true;
         playerCharacter.GetComponent<InteractionRaycast>().enabled = true;
         inDialogue = false;
-        Debug.Log("End of Conversation");
     }
 
     public void OnInteractInConvo(InputAction.CallbackContext context)
@@ -76,7 +90,6 @@ public class DialogueManager : MonoBehaviour
         // Else all three actions will register and the button will have "been pressed" thrice
         if (inDialogue && context.performed)
         {
-            Debug.Log("Yes it gets recognized");
             DisplayNextSentence();
         }
 

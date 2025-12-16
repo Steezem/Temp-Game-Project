@@ -1563,9 +1563,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLine
   playerCharacter: {fileID: 4073660776015361396}
-  speakerNameText: {fileID: 0}
+  nameText: {fileID: 701133538}
+  dialogueText: {fileID: 585914607}
   optionButtons: []
   dialoguePanel: {fileID: 2053827195}
+  animator: {fileID: 2053827199}
 --- !u!4 &1555374304
 Transform:
   m_ObjectHideFlags: 0
@@ -1766,6 +1768,7 @@ GameObject:
   - component: {fileID: 2053827196}
   - component: {fileID: 2053827198}
   - component: {fileID: 2053827197}
+  - component: {fileID: 2053827199}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1832,6 +1835,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2053827195}
   m_CullTransparentMesh: 1
+--- !u!95 &2053827199
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053827195}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 16aa370e2853d8742913d90d6bf0f6d9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &2182082236568906020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1990,7 +2015,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f48d5da56f7ed4b887384a8cf64d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractionRaycast
-  manager: {fileID: 1555374303}
 --- !u!1001 &4869974052723557295
 PrefabInstance:
   m_ObjectHideFlags: 0
