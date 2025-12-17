@@ -75,7 +75,6 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-        Debug.Log("EndDialogue fires");
         animator.SetBool("isOpen", false);
         //dialoguePanel.SetActive(false);
         playerCharacter.GetComponent<CharacterMovement>().enabled = true;
