@@ -14,6 +14,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialoguePanel;
 
     public Animator animator;
+    private Animator npcAnimator;
     private Queue<string> sentences;
     private bool inDialogue = false;
 
@@ -25,7 +26,7 @@ public class DialogueManager : MonoBehaviour
         //Eventually load dialogue from a json file permaybe
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(Transform npcTransform, Dialogue dialogue)
     {
         // this catches the Interaction call of StartDialogue
         // It works, but is very spaghetti-like
@@ -33,6 +34,12 @@ public class DialogueManager : MonoBehaviour
 
         nameText.text = dialogue.name;
         sentences.Clear();
+
+        if(npcTransform.GetComponent<Animator>())
+        {
+            npcAnimator = npcTransform.GetComponent<Animator>();
+            npcAnimator.SetBool("isTalking", true);
+        }
         playerCharacter.GetComponent<CharacterMovement>().enabled = false;
         playerCharacter.GetComponent<InteractionRaycast>().enabled = false;
 
@@ -76,6 +83,7 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("isOpen", false);
+        if(npcAnimator) npcAnimator.SetBool("isTalking", false);
         //dialoguePanel.SetActive(false);
         playerCharacter.GetComponent<CharacterMovement>().enabled = true;
         playerCharacter.GetComponent<InteractionRaycast>().enabled = true;

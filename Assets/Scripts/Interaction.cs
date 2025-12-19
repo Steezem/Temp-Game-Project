@@ -13,7 +13,7 @@ public class InteractionRaycast : MonoBehaviour
             {
                 // by doing this, you don't have to manually add the DialogueManager to the Interaction Script on the player character
                 // Problems may arise if multiple Dialogue Managers are available
-                FindAnyObjectByType<DialogueManager>().StartDialogue(hit.transform.GetComponent<DialogueTrigger>().dialogue);
+                FindAnyObjectByType<DialogueManager>().StartDialogue(hit.transform, hit.transform.GetComponent<DialogueTrigger>().dialogue);
             }
         }
     }
