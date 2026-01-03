@@ -737,24 +737,16 @@ PrefabInstance:
       value: Winnie
       objectReference: {fileID: 0}
     - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
-      propertyPath: dialogue.sentences.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: Pardner, thank heavens you're still here!
+      value: Howdy John!
       objectReference: {fileID: 0}
     - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
-      value: I've seen you talking to all the nice folks around here.
+      value: We've all been waiting so long for you!
       objectReference: {fileID: 0}
     - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[2]'
-      value: 'Please... stay as long as you like. '
-      objectReference: {fileID: 0}
-    - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
-      propertyPath: 'dialogue.sentences.Array.data[3]'
-      value: I don't know about this fog though...
+      value: Finally, our life can have a bit of meaning.
       objectReference: {fileID: 0}
     - target: {fileID: 581591682844321816, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_Name
@@ -1653,23 +1645,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: Max is so loud.
+      value: ...
       objectReference: {fileID: 0}
     - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
-      value: What a dingus.
+      value: You can see me?
       objectReference: {fileID: 0}
     - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[2]'
-      value: He's looking for me right now.
+      value: Max and I started playing Hide and Seek 3 days ago.
       objectReference: {fileID: 0}
     - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[3]'
-      value: At least he remembered I exist.
+      value: He keeps looking over me.
       objectReference: {fileID: 0}
     - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[4]'
-      value: But oh well, I'll just keep hiding. That's the game!
+      value: I don't know if he even thinks about me, or only about his stupid self.
       objectReference: {fileID: 0}
     - target: {fileID: 581591682844321816, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_Name
@@ -1693,7 +1685,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8907012567464701675, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -48.976
+      value: -42.78
       objectReference: {fileID: 0}
     - target: {fileID: 8907012567464701675, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1701,11 +1693,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8907012567464701675, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 43.84
+      value: 36.56
       objectReference: {fileID: 0}
     - target: {fileID: 8907012567464701675, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.7933533
+      value: -0.2164395
       objectReference: {fileID: 0}
     - target: {fileID: 8907012567464701675, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1713,7 +1705,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8907012567464701675, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.60876155
+      value: 0.97629607
       objectReference: {fileID: 0}
     - target: {fileID: 8907012567464701675, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1725,7 +1717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8907012567464701675, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 285
+      value: 205
       objectReference: {fileID: 0}
     - target: {fileID: 8907012567464701675, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -2080,27 +2072,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: 'Johnny, something not Maximum is going on. '
+      value: Hey John, it's me! Your big buddy Max!
       objectReference: {fileID: 0}
     - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
-      value: I can't find Minnie!
+      value: ...
       objectReference: {fileID: 0}
     - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[2]'
-      value: With all of my Maximumness I lost the Maxest thing of all.
+      value: What do you mean "Why are you so big?"
       objectReference: {fileID: 0}
     - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[3]'
-      value: My Sister!
+      value: I'm just Max...
       objectReference: {fileID: 0}
     - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[4]'
-      value: I had some trouble finding her even before.
+      value: Max MAXIMUS THE MAXEST OF THEM ALL
       objectReference: {fileID: 0}
     - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[5]'
-      value: But all this fog around here is not Maximum at all bro.
+      value: If you're looking for my sis Minnie, she should be around here somewhere...
       objectReference: {fileID: 0}
     - target: {fileID: 581591682844321816, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_Name
@@ -2460,7 +2452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: Ew, go away.
+      value: Man you're ugly.
       objectReference: {fileID: 0}
     - target: {fileID: 581591682844321816, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_Name
@@ -2472,19 +2464,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8907012567464701675, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 33.935658
+      value: 9.497862
       objectReference: {fileID: 0}
     - target: {fileID: 8907012567464701675, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.6850073
       objectReference: {fileID: 0}
     - target: {fileID: 8907012567464701675, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 37.670986
+      value: 38.883987
       objectReference: {fileID: 0}
     - target: {fileID: 8907012567464701675, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9839365
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 8907012567464701675, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2492,7 +2484,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8907012567464701675, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.17851928
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 8907012567464701675, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_LocalRotation.z
@@ -2504,7 +2496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8907012567464701675, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 699.433
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 8907012567464701675, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -2937,16 +2929,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: Bro, I asked you not to talk to Sally.
+      value: Hey man.
       objectReference: {fileID: 0}
     - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
-      value: Now she can't stop talking about how the contrast between your skin
-        and nose colors is so arousing.
+      value: Don't talk to my girl over here.
       objectReference: {fileID: 0}
     - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[2]'
-      value: It's gross!
+      value: You're way too good looking and I am insecure.
       objectReference: {fileID: 0}
     - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[3]'
@@ -2960,33 +2951,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Harry
       objectReference: {fileID: 0}
-    - target: {fileID: 5945330565057531863, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.23100045
-      objectReference: {fileID: 0}
-    - target: {fileID: 5945330565057531863, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.8609996
-      objectReference: {fileID: 0}
-    - target: {fileID: 5945330565057531863, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.8431527
-      objectReference: {fileID: 0}
-    - target: {fileID: 5945330565057531863, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.53767425
-      objectReference: {fileID: 0}
-    - target: {fileID: 5945330565057531863, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 1145.051
-      objectReference: {fileID: 0}
     - target: {fileID: 8907012567464701675, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 34.95
+      value: 8.69
       objectReference: {fileID: 0}
     - target: {fileID: 8907012567464701675, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.6850073
       objectReference: {fileID: 0}
     - target: {fileID: 8907012567464701675, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3184,13 +3155,13 @@ MonoBehaviour:
   dialogue:
     name: Rio
     sentences:
-    - John! Something is going on here.
-    - I think it's got something to do with you visiting us.
-    - 'Have you seen those weird doors standing around? '
-    - No one knows what those are.
-    - And then there's this fog...
-    - I also heard some strange things coming from the mountains back there.
-    - If only I could move away from this spot...
+    - Hello John!
+    - My name is Rio, I was supposed to be you in the beginning.
+    - But look at me. I am way more complex than you.
+    - So our creator chose you to be his extension into our world.
+    - And i have been reduced to these couple of dialogue lines...
+    - Enjoy every Input you receive, John....
+    - Someday you won't receive anymore.
     - At least I'm animated!
 --- !u!1001 &1458461642
 PrefabInstance:
@@ -4614,26 +4585,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 261360166}
     m_Modifications:
-    - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
-      propertyPath: dialogue.sentences.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
-      propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: John you're still here! I'm so glad!
-      objectReference: {fileID: 0}
-    - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
-      propertyPath: 'dialogue.sentences.Array.data[1]'
-      value: Have you met everyone yet?
-      objectReference: {fileID: 0}
-    - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
-      propertyPath: 'dialogue.sentences.Array.data[2]'
-      value: They all missed you all those years... those long long years.
-      objectReference: {fileID: 0}
-    - target: {fileID: 297113506820694063, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
-      propertyPath: 'dialogue.sentences.Array.data[3]'
-      value: I became blue from waiting!
-      objectReference: {fileID: 0}
     - target: {fileID: 581591682844321816, guid: c1aeb396df9b8c545bc98b3e63434c7d, type: 3}
       propertyPath: m_Name
       value: Peeta
