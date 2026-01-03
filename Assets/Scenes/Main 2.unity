@@ -4015,6 +4015,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1509971169}
     m_Modifications:
+    - target: {fileID: 4280659093285064233, guid: 2c2d3cee078aab24c9a8a83a45c6c88f, type: 3}
+      propertyPath: m_TagString
+      value: Door
+      objectReference: {fileID: 0}
     - target: {fileID: 7080858968819370759, guid: 2c2d3cee078aab24c9a8a83a45c6c88f, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.822
@@ -4071,6 +4075,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Exit Door
       objectReference: {fileID: 0}
+    - target: {fileID: 8601614153650410788, guid: 2c2d3cee078aab24c9a8a83a45c6c88f, type: 3}
+      propertyPath: m_TagString
+      value: Door
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4078,6 +4086,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4280659093285064233, guid: 2c2d3cee078aab24c9a8a83a45c6c88f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1934364386}
+    - targetCorrespondingSourceObject: {fileID: 4280659093285064233, guid: 2c2d3cee078aab24c9a8a83a45c6c88f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1934364387}
   m_SourcePrefab: {fileID: 100100000, guid: 2c2d3cee078aab24c9a8a83a45c6c88f, type: 3}
 --- !u!4 &1934364384 stripped
 Transform:
@@ -4110,6 +4121,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.1457742, y: 2.1411703, z: 0.0824056}
   m_Center: {x: 0.0008773856, y: 1.0395018, z: 0.007963427}
+--- !u!114 &1934364387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934364385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92787fda38922f642ab41262872c91bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue:
+    name: 
+    sentences:
+    - Looks like this door leads you further on.
 --- !u!1 &2046493562
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,8 +1,9 @@
-using TMPro;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
@@ -12,6 +13,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public Button[] optionButtons;
     public GameObject dialoguePanel;
+    private Transform npcTransform;
 
     public Animator animator;
     private Animator npcAnimator;
@@ -34,6 +36,7 @@ public class DialogueManager : MonoBehaviour
 
         nameText.text = dialogue.name;
         sentences.Clear();
+        this.npcTransform = npcTransform;
 
         if(npcTransform.GetComponent<Animator>())
         {
@@ -86,6 +89,12 @@ public class DialogueManager : MonoBehaviour
         playerCharacter.GetComponent<CharacterMovement>().enabled = true;
         playerCharacter.GetComponent<InteractionRaycast>().enabled = true;
         inDialogue = false;
+
+        if(npcTransform.tag == "Door")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
     }
 
     public void OnInteractInConvo(InputAction.CallbackContext context)
